@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificações Técnicas - Arsenal Naval</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Estilização Interna Requisitada pelos Requisitos Técnicos VI -->
+    <style>
+        /* Estilo específico para destacar o cabeçalho desta tabela */
+        .tabela-navios th {
+            background-color: #1a365d;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        /* Efeito visual de linhas alternadas para melhorar a leitura */
+        .tabela-navios tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <h1>Arsenal Naval</h1>
+        <p>Registros Técnicos e Dados Comparativos</p>
+    </header>
+
+    <!-- Menu de Navegação Global -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="conteudo.html">Catálogo</a></li>
+            <li><a href="dados.html" class="active">Especificações</a></li>
+            <li><a href="cadastro.html">Recrutamento</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section>
+            <h2>Matriz de Comparação de Frotas</h2>
+            <p>
+                A tabela abaixo reúne as especificações técnicas cruciais coletadas dos registros de almirantado da época. 
+                Estes dados refletem o equilíbrio de forças nos oceanos durante o final do século XVIII e início do século XIX.
+            </p>
+
+            <!-- Tabela Estruturada de Informações -->
+            <div class="tabela-container">
+                <table class="tabela-navios">
+                    <thead>
+                        <tr>
+                            <th>Nome do Navio</th>
+                            <th>Nação</th>
+                            <th>Lançamento</th>
+                            <th>Nº de Canhões</th>
+                            <th>Batalha Famosa</th>
+                            <th>Destino Final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>HMS Victory</strong></td>
+                            <td>Grã-Bretanha</td>
+                            <td>1765</td>
+                            <td>104</td>
+                            <td>Trafalgar (1805)</td>
+                            <td>Preservado em Portsmouth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Santísima Trinidad</strong></td>
+                            <td>Espanha</td>
+                            <td>1769</td>
+                            <td>140</td>
+                            <td>Cabo de São Vicente</td>
+                            <td>Naufragou em 1805</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bucentaure</strong></td>
+                            <td>França</td>
+                            <td>1803</td>
+                            <td>80</td>
+                            <td>Trafalgar (1805)</td>
+                            <td>Naufragou em tempestade</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HMS Agamemnon</strong></td>
+                            <td>Grã-Bretanha</td>
+                            <td>1781</td>
+                            <td>64</td>
+                            <td>Copenhague (1801)</td>
+                            <td>Encalhou no Rio da Prata</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Le Redoutable</strong></td>
+                            <td>França</td>
+                            <td>1791</td>
+                            <td>74</td>
+                            <td>Trafalgar (1805)</td>
+                            <td>Afundou após combate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>San José</strong></td>
+                            <td>Espanha</td>
+                            <td>1783</td>
+                            <td>112</td>
+                            <td>Cabo de São Vicente</td>
+                            <td>Capturado pela Royal Navy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="nota-tabela">
+                * Nota: O número de canhões listado refere-se à classificação nominal do navio, embora muitas vezes carregassem carronadas adicionais não contabilizadas oficialmente.
+            </p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Arsenal Naval Histórico. Desenvolvido para fins educacionais e catalogação histórica.</p>
+    </footer>
+
+</body>
+</html>

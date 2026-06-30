@@ -1,0 +1,346 @@
+/* ==========================================================================
+   ESTILOS GLOBAIS E CONFIGURAÇÕES DE FONTE (Requisito VI - Externo)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    background-color: #fcf9f2; /* Tom de papel antigo/pergaminho leve */
+    color: #2d3748;
+}
+
+/* Cabeçalho Principal */
+header {
+    background-color: #1a365d; /* Azul Marinho Profundo */
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 4px solid #c9a054; /* Dourado Naval */
+}
+
+header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+header p {
+    font-style: italic;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   MENU DE NAVEGAÇÃO GLOBAL
+   ========================================================================== */
+nav {
+    background-color: #2c5282;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    background-color: #c9a054;
+    color: #1a365d;
+}
+
+/* ==========================================================================
+   LAYOUT DO CONTEÚDO PRINCIPAL (MAIN)
+   ========================================================================== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    min-height: 70vh;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 5px solid #1a365d;
+}
+
+h2 {
+    color: #1a365d;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #2c5282;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+h4 {
+    color: #4a5568;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Destaques de texto */
+strong {
+    color: #1a365d;
+}
+
+em {
+    color: #718096;
+}
+
+/* Listas Ordenadas e Não Ordenadas */
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+/* Links em geral */
+a {
+    color: #2c5282;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #c9a054;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DO CATÁLOGO (conteudo.html) e IMAGENS
+   ========================================================================== */
+.navio-card {
+    border-left: 5px solid #c9a054;
+}
+
+.img-catalogo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border: 6px double #c9a054;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border-radius: 2px;
+}
+
+.referencias {
+    background-color: #edf2f7;
+    border-left: 5px solid #718096;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DE TABELAS (dados.html)
+   ========================================================================== */
+.tabela-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.tabela-navios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif; /* Mudança sutil de fonte para dados */
+}
+
+.tabela-navios th, 
+.tabela-navios td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabela-navios td {
+    font-size: 0.95rem;
+}
+
+.nota-tabela {
+    font-size: 0.85rem;
+    color: #718096;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DO FORMULÁRIO (cadastro.html)
+   ========================================================================== */
+.formulario-container {
+    border-left: 5px solid #2b6cb0;
+}
+
+fieldset {
+    border: 1px solid #cbd5e0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    background-color: #f7fafc;
+}
+
+legend {
+    font-weight: bold;
+    color: #1a365d;
+    padding: 0 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="date"],
+.campo input[type="number"],
+.campo select,
+.campo textarea {
+    padding: 0.6rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #2c5282;
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.2);
+}
+
+.campo-linha {
+    margin-bottom: 1.2rem;
+}
+
+.campo-linha .label-falsa {
+    display: block;
+    font-weight: bold;
+    color: #4a5568;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.campo-linha label {
+    margin-right: 1.5rem;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+}
+
+.range-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.range-container input {
+    flex: 1;
+}
+
+.campo input[type="color"] {
+    width: 60px;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+}
+
+/* Botões do Formulário */
+.botoes-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.botoes-form button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+}
+
+#btnEnviar {
+    background-color: #1a365d;
+    color: #ffffff;
+    flex: 2;
+}
+
+#btnEnviar:hover {
+    background-color: #2c5282;
+}
+
+#btnLimpar {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    flex: 1;
+}
+
+#btnLimpar:hover {
+    background-color: #cbd5e0;
+}
+
+/* ==========================================================================
+   RODAPÉ SEMÂNTICO
+   ========================================================================== */
+footer {
+    background-color: #1a365d;
+    color: #a0aec0;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    border-top: 4px solid #c9a054;
+}

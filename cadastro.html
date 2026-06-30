@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alistamento de Tripulação - Arsenal Naval</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <h1>Arsenal Naval</h1>
+        <p>Alistamento e Registro de Oficiais</p>
+    </header>
+
+    <!-- Menu de Navegação Global -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="conteudo.html">Catálogo</a></li>
+            <li><a href="dados.html">Especificações</a></li>
+            <li><a href="cadastro.html" class="active">Recrutamento</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="formulario-container">
+            <h2>Formulário de Alistamento Marítimo</h2>
+            <p>
+                Deseja se juntar à tripulação ou registrar uma nova embarcação histórica em nossos arquivos? 
+                Preencha os campos regulamentares abaixo. Todos os dados são validados oficialmente.
+            </p>
+
+            <!-- Formulário com ID para manipulação via JavaScript -->
+            <form id="formAlistamento" method="POST" action="#">
+                
+                <!-- Grupo 1: Dados Pessoais (Inputs Clássicos e HTML5) -->
+                <fieldset>
+                    <legend>Dados do Recruta / Historiador</legend>
+                    
+                    <div class="campo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required minlength="3" placeholder="Ex: Horatio Nelson">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail de Contato:</label>
+                        <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+                    </div>
+
+                    <div class="campo">
+                        <label for="nascimento">Data de Nascimento:</label>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="experiencia">Anos de Experiência em Navegação:</label>
+                        <input type="number" id="experiencia" name="experiencia" min="0" max="60" value="0">
+                    </div>
+                </fieldset>
+
+                <!-- Grupo 2: Preferências de Serviço (Radio, Checkbox, Select e Range) -->
+                <fieldset>
+                    <legend>Preferências Operacionais</legend>
+
+                    <div class="campo">
+                        <label for="patente">Patente Pretendida:</label>
+                        <select id="patente" name="patente" required>
+                            <option value="">-- Selecione uma Patente --</option>
+                            <option value="almirante">Almirante da Frota</option>
+                            <option value="capitao">Capitão de Mar e Guerra</option>
+                            <option value="tenente">Primeiro-Tenente</option>
+                            <option value="marujo">Marujo Combatente</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-linha">
+                        <span class="label-falsa">Nação de Preferência:</span>
+                        <label><input type="radio" name="nacao" value="gra-bretanha" checked> Grã-Bretanha</label>
+                        <label><input type="radio" name="nacao" value="franca"> França</label>
+                        <label><input type="radio" name="nacao" value="espanha"> Espanha</label>
+                    </div>
+
+                    <div class="campo-linha">
+                        <span class="label-falsa">Áreas de Especialização:</span>
+                        <label><input type="checkbox" name="especialidade" value="artilharia"> Artilharia de Canhões</label>
+                        <label><input type="checkbox" name="especialidade" value="manobra"> Manobra de Velas</label>
+                        <label><input type="checkbox" name="especialidade" value="cartografia"> Cartografia e Rotas</label>
+                    </div>
+
+                    <div class="campo">
+                        <label for="afinidade">Nível de Afinidade com Combates Navais (HTML5 Range):</label>
+                        <div class="range-container">
+                            <span>0</span>
+                            <input type="range" id="afinidade" name="afinidade" min="0" max="10" value="5">
+                            <span>10</span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Grupo 3: Mensagem e Arquivos -->
+                <fieldset>
+                    <legend>Informações Adicionais</legend>
+
+                    <div class="campo">
+                        <label for="corNavio">Cor da Bandeira de Sinalização (HTML5 Color):</label>
+                        <input type="color" id="corNavio" name="corNavio" value="#1a365d">
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Histórico de Serviço / Observações:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva brevemente suas principais batalhas ou interesses históricos..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Botões de Ação -->
+                <div class="botoes-form">
+                    <button type="submit" id="btnEnviar">Enviar Alistamento</button>
+                    <button type="reset" id="btnLimpar">Limpar Campos</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Arsenal Naval Histórico. Desenvolvido para fins educacionais e catalogação histórica.</p>
+    </footer>
+
+    <!-- Vinculação do JavaScript Externo Requisitado -->
+    <script src="script.js"></script>
+</body>
+</html>
